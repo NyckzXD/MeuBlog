@@ -19,27 +19,26 @@ fetch("https://api.github.com/users/NyckzXD/repos")
         console.error(error);
     });
 
-function carregarConteudo(caminho) {
-    fetch(caminho)
+document.addEventListener("DOMContentLoaded", () => {
+  const linkSobre = document.getElementById("linkSobre");
+  const conteudo = document.querySelector("main.content");
+
+  if (linkSobre && conteudo) {
+    linkSobre.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      fetch("assets/html/sobre.html") // Caminho RELATIVO, funciona no GitHub Pages
         .then(res => {
-            if (!res.ok) throw new Error("Erro ao carregar página");
-            return res.text();
+          if (!res.ok) throw new Error("Erro ao carregar conteúdo.");
+          return res.text();
         })
         .then(html => {
-            document.getElementById("conteudoPrincipal").innerHTML = html;
+          conteudo.innerHTML = html;
         })
         .catch(err => {
-            console.error(err);
-            document.getElementById("conteudoPrincipal").innerHTML = "<p>Erro ao carregar conteúdo.</p>";
+          console.error(err);
+          conteudo.innerHTML = "<p>Erro ao carregar conteúdo.</p>";
         });
-}
-
-// Eventos dos links
-document.getElementById("linkSobre").addEventListener("click", (e) => {
-  e.preventDefault();
-  fetch("/MEUBLOG/assets/html/sobre.html")
-    .then(res => res.text())
-    .then(html => {
-      document.querySelector("main.content").innerHTML = html;
     });
+  }
 });
