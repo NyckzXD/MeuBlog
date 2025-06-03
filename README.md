@@ -1,9 +1,35 @@
-# 🌐 Meu Blog
+# 🌐 Meu Portfólio Pessoal - Nycolas Fernandes
 
-Este é um projeto simples de blog pessoal desenvolvido com HTML, CSS e JS O objetivo é criar um site para compartilhar informações sobre mim, meus posts, redes sociais e formas de contato.
+Este é meu site pessoal e blog, desenvolvido com o objetivo de compartilhar meus conhecimentos, trajetória como estudante de programação, projetos e canais de contato.
 
-## 🔧 Tecnologias Utilizadas
+> 🔗 Acesse em:
+> 
+---
 
-- HTML
-- CSS
-- JAVASCRIPT
+## 🧠 Sobre o Projeto
+
+O projeto foi criado com:
+
+- HTML5 semântico
+- CSS3 com tema escuro clean
+- JavaScript puro (Vanilla JS) para interações dinâmicas
+- Consumo da [GitHub API](https://docs.github.com/en/rest) para exibir repositórios
+- Estrutura modular com carregamento dinâmico de páginas (como a seção **Sobre**)
+
+---
+
+## 📁 Funcionalidades
+
+- Página inicial com apresentação pessoal
+- Página "Sobre" com carregamento dinâmico via `fetch()`
+- Exibição de repositórios do GitHub com número de **estrelas ⭐** e **forks 🍴**
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- HTML5
+- CSS3
+- JavaScript (ES6)
+- Font Awesome (para ícones)
+- GitHub Pages (deploy)
+---
