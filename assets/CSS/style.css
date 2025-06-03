@@ -20,6 +20,7 @@ header h1 {
 }
 
 nav a {
+    text-align: center;
     color: #F7F9F9;
     margin: 0 12px;
     text-decoration: none;
@@ -96,4 +97,27 @@ footer {
     text-align: center;
     border-top: 1px solid #333;
     color: #888;
+}
+#reposGithub div {
+    background-color: #1e1e1e;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+}
+
+#reposGithub a {
+    color: #78D5D7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+#reposGithub a:hover {
+    color: #2081C3; /* verde neon claro (ou escolha outra cor) */
+}
+#reposGithub p {
+    color: #F7F9F9;
+}
+#reposGithub p:last-of-type {
+    font-size: 0.9em;
+    color: #aaa;
 }
