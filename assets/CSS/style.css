@@ -1,0 +1,125 @@
+/* CSS: ./CSS/style.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #1f1f1f;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+#titulo {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+nav a {
+    color: #bbbbbb;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #1e90ff;
+}
+
+.container {
+    display: flex;
+    padding: 30px;
+    gap: 20px;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.sidebar h2 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    color: #bbbbbb;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    color: #1e90ff;
+}
+
+.content {
+    flex: 3;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.content h2 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+.content p {
+    color: #cccccc;
+}
+#Hello{
+    text-align: center;
+}
+
+footer {
+    background-color: #1f1f1f;
+    color: #888;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+    border-top: 1px solid #333;
+}
+
+a i {
+    font-size: 1rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px 10px;
+    }
+}
