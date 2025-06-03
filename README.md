@@ -10,10 +10,10 @@ Este é meu site pessoal e blog, desenvolvido com o objetivo de compartilhar meu
 
 O projeto foi criado com:
 
-- HTML5 semântico
-- CSS3 com tema escuro clean
-- JavaScript puro (Vanilla JS) para interações dinâmicas
-- Consumo da [GitHub API](https://docs.github.com/en/rest) para exibir repositórios
+- HTML5
+- CSS3
+- JavaScript puro (Vanilla JS)
+- [GitHub API](https://docs.github.com/en/rest) para exibir repositórios
 - Estrutura modular com carregamento dinâmico de páginas (como a seção **Sobre**)
 
 ---
@@ -21,7 +21,6 @@ O projeto foi criado com:
 ## 📁 Funcionalidades
 
 - Página inicial com apresentação pessoal
-- Página "Sobre" com carregamento dinâmico via `fetch()`
 - Exibição de repositórios do GitHub com número de **estrelas ⭐** e **forks 🍴**
 ---
 
