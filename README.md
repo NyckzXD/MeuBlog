@@ -3,7 +3,7 @@
 Este é meu site pessoal e blog, desenvolvido com o objetivo de compartilhar meus conhecimentos, trajetória como estudante de programação, projetos e canais de contato.
 
 > 🔗 Acesse em:
-> 
+> https://nyckzxd.github.io/MeuBlog/
 ---
 
 ## 🧠 Sobre o Projeto
