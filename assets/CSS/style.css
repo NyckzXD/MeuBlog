@@ -46,7 +46,7 @@ nav a:hover {
 }
 
 .sidebar h2 {
-    color: #78D5D7;
+    color: #121212;
     margin-top: 0;
 }
 
@@ -56,11 +56,12 @@ nav a:hover {
 }
 
 .sidebar li {
+    color: #121212;
     margin: 12px 0;
 }
 
 .sidebar a {
-    color: #ccc;
+    color: #121212;
     text-decoration: none;
 }
 
