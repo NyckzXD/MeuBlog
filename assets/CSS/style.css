@@ -1,124 +1,346 @@
+:root {
+    --primary-bg: #121212;
+    --secondary-bg: #1e1e1e;
+    --primary-color: #F7F9F9;
+    --accent: #78D5D7;
+    --accent-hover: #2081C3;
+    --border: #333;
+    --muted: #888;
+    --muted-light: #aaa;
+    --glass: rgba(30, 30, 30, 0.7);
+    --shadow: 0 8px 24px rgba(0,0,0,0.3), 0 1.5px 10px rgba(120,213,215,0.07);
+    --blur: blur(8px);
+}
+
 body {
-    background-color: #121212;
-    color: #F7F9F9;
+    background: linear-gradient(135deg, #121212 0%, #222d32 100%);
+    color: var(--primary-color);
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    animation: fadeInBody 1s ease;
+}
+@keyframes fadeInBody {
+    from { opacity: 0;}
+    to { opacity: 1;}
 }
 
 header {
-    background-color: #1e1e1e;
+    background: linear-gradient(90deg, var(--secondary-bg), #232526 70%);
     padding: 1.5rem;
     text-align: center;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    animation: slideDown 0.7s;
+}
+@keyframes slideDown {
+    from { transform: translateY(-60px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
 header h1 {
     margin: 0;
-    font-size: 2rem;
-    color: #78D5D7;
+    font-size: 2.2rem;
+    color: var(--accent);
+    letter-spacing: 2px;
+    text-shadow: 0 1px 10px #222d32;
+    transition: color 0.3s;
 }
 
 nav a {
-    text-align: center;
-    color: #F7F9F9;
-    margin: 0 12px;
+    color: var(--primary-color);
+    margin: 0 18px;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.1rem;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, border-color 0.3s;
+    padding-bottom: 2px;
 }
-
-nav a:hover {
-    color: #78D5D7;
+nav a:hover(),
+nav a:focus {
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+    outline: none;
 }
 
 .container {
     display: flex;
     flex-direction: row;
     min-height: 100vh;
+    gap: 2rem;
+    animation: fadeUp 1s 0.2s both;
+}
+@keyframes fadeUp {
+    from { transform: translateY(40px); opacity: 0;}
+    to { transform: translateY(0); opacity: 1;}
 }
 
 .sidebar {
-    background-color: #78D5D7;
-    padding: 1.5rem;
-    width: 220px;
+    background: var(--glass);
+    padding: 2rem 1.5rem;
+    width: 240px;
     min-height: 100vh;
-    border-right: 1px solid #333;
+    border-right: 1px solid var(--border);
+    border-radius: 24px;
+    backdrop-filter: var(--blur);
+    box-shadow: var(--shadow);
+    animation: fadeInSidebar 1s 0.3s both;
+}
+@keyframes fadeInSidebar {
+    from { opacity: 0; transform: translateX(-40px);}
+    to { opacity: 1; transform: translateX(0);}
 }
 
 .sidebar h2 {
-    color: #121212;
+    color: var(--accent);
     margin-top: 0;
+    letter-spacing: 1px;
 }
 
 .sidebar ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .sidebar li {
-    color: #121212;
-    margin: 12px 0;
+    margin: 18px 0;
+    font-weight: 500;
+    font-size: 1.08rem;
 }
 
 .sidebar a {
-    color: #121212;
+    color: var(--primary-bg);
     text-decoration: none;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 0;
 }
-
-.sidebar a:hover {
-    color: #2081C3;
+.sidebar a:hover,
+.sidebar a:focus {
+    color: var(--accent-hover);
+    outline: none;
+    transform: translateX(3px) scale(1.05);
 }
 
 .content {
     flex: 1;
-    padding: 2rem;
+    padding: 2.5rem 3rem 2rem 2rem;
+    background: var(--glass);
+    border-radius: 32px;
+    margin: 2rem 1.5rem 2rem 0;
+    box-shadow: var(--shadow);
+    animation: fadeInMain 1s 0.6s both;
+}
+@keyframes fadeInMain {
+    from { opacity: 0; transform: translateY(50px);}
+    to { opacity: 1; transform: translateY(0);}
 }
 
 .content h2, .content h3 {
-    color: #78D5D7;
+    color: var(--accent);
+    transition: color 0.3s;
 }
 
+.center {
+    text-align: center !important;
+}
+.italic {
+    font-style: italic !important;
+}
+.large {
+    font-size: x-large !important;
+}
 .btn {
-    background-color: #78D5D7;
-    color: #F7F9F9;
-    padding: 12px 24px;
-    border-radius: 8px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-hover) 90%);
+    color: var(--primary-color);
+    padding: 13px 28px;
+    border-radius: 12px;
     text-decoration: none;
     font-weight: bold;
-    transition: background 0.3s ease;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow 1.3s, background 1.3s, transform 1.2s;
+    box-shadow: 0 2px 8px rgba(120,213,215,0.08);
+    font-size: 1.07rem;
+    display: inline-block;
 }
 
-.btn:hover {
-    background-color: #2081C3;
+.btn:hover,
+.btn:focus {
+    box-shadow: 0 8px 28px rgba(120,213,215,0.22), 0 1.5px 10px rgba(120,213,215,0.14);
+    background: linear-gradient(90deg, var(--accent-hover), var(--accent) 80%);
+    transform: translateY(-3px);
+    outline: none;
 }
-
 footer {
-    background-color: #1e1e1e;
+    background: var(--secondary-bg);
     padding: 1rem;
     text-align: center;
-    border-top: 1px solid #333;
-    color: #888;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    letter-spacing: 1px;
+    font-size: 1rem;
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.07);
+    border-radius: 0 0 18px 18px;
+    margin: 0 1rem 1rem 1rem;
 }
+
 #reposGithub div {
-    background-color: #1e1e1e;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+    background: var(--secondary-bg);
+    padding: 14px;
+    margin-bottom: 14px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s, box-shadow 0.2s;
+    animation: fadeInRepo 0.7s both;
+}
+#reposGithub div:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(120,213,215,0.16);
+}
+@keyframes fadeInRepo {
+    from { opacity: 0; transform: scale(0.96);}
+    to { opacity: 1; transform: scale(1);}
 }
 
 #reposGithub a {
-    color: #78D5D7;
+    color: var(--accent);
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s;
 }
-#reposGithub a:hover {
-    color: #2081C3; /* verde neon claro (ou escolha outra cor) */
+#reposGithub a:hover,
+#reposGithub a:focus {
+    color: var(--accent-hover);
+    outline: none;
 }
 #reposGithub p {
-    color: #F7F9F9;
+    color: var(--primary-color);
 }
 #reposGithub p:last-of-type {
     font-size: 0.9em;
-    color: #aaa;
+    color: var(--muted-light);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background: var(--primary-bg);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 4px;
+}
+
+@media (max-width: 1000px) {
+    .container {
+        flex-direction: column;
+        gap: 0;
+    }
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+        margin-bottom: 1.2rem;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        border-radius: 0 0 22px 22px;
+        box-shadow: none;
+    }
+    .content {
+        margin: 0 0.5rem 1rem 0.5rem;
+        padding: 1.2rem;
+        border-radius: 22px;
+    }
+    footer {
+        margin: 0;
+        border-radius: 0;
+    }
+}
+@media (max-width: 600px) {
+    header h1 { font-size: 1.3rem; }
+    .sidebar, .content { padding: 1rem; }
+    .content { font-size: 0.97rem; }
+}
+.animated-title {
+    animation: fadeUp 1s 0.1s both;
+}
+
+.animated-list {
+    animation: fadeInList 1s 0.4s both;
+}
+
+@keyframes fadeInList {
+    from { opacity: 0; transform: translateY(30px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+.carreira-content {
+    background: var(--glass);
+    border-radius: 32px;
+    box-shadow: var(--shadow);
+    margin: 2rem 1.5rem 2rem 0;
+    padding: 2.5rem 3rem 2rem 2rem;
+    animation: fadeInMain 1s 0.3s both;
+}
+
+.carreira-content ul {
+    margin-bottom: 2rem;
+    padding-left: 1.2rem;
+}
+
+.carreira-content li {
+    margin-bottom: 1.3rem;
+    font-size: 1.08rem;
+    animation: fadeInList 1s both;
+}
+
+.carreira-content small {
+    color: var(--muted-light);
+}
+.career-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.career-card {
+    background: var(--glass);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    padding: 1.3rem 1.8rem;
+    border-left: 4px solid var(--accent);
+    animation: fadeInList 0.9s;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.career-card:hover {
+    transform: scale(1.03) translateY(-3px);
+    box-shadow: 0 8px 24px rgba(120,213,215,0.18);
+}
+
+.job-title {
+    color: var(--accent-hover);
+    font-size: 1.17rem;
+}
+
+.job-company {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.job-dates {
+    color: var(--muted-light);
+    font-size: 0.97em;
+}
+
+.skills-list {
+    margin-bottom: 2.5rem;
 }
