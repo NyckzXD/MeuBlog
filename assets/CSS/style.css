@@ -1,34 +1,49 @@
+:root {
+    --primary-bg: #121212;
+    --secondary-bg: #1e1e1e;
+    --primary-color: #F7F9F9;
+    --accent: #78D5D7;
+    --accent-hover: #2081C3;
+    --border: #333;
+    --muted: #888;
+    --muted-light: #aaa;
+    --shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+}
+
 body {
-    background-color: #121212;
-    color: #F7F9F9;
+    background-color: var(--primary-bg);
+    color: var(--primary-color);
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #1e1e1e;
+    background-color: var(--secondary-bg);
     padding: 1.5rem;
     text-align: center;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid var(--border);
 }
 
 header h1 {
     margin: 0;
     font-size: 2rem;
-    color: #78D5D7;
+    color: var(--accent);
 }
 
 nav a {
     text-align: center;
-    color: #F7F9F9;
+    color: var(--primary-color);
     margin: 0 12px;
     text-decoration: none;
     font-weight: bold;
+    position: relative;
 }
 
-nav a:hover {
-    color: #78D5D7;
+nav a:hover,
+nav a:focus {
+    color: var(--accent);
+    outline: none;
 }
 
 .container {
@@ -38,15 +53,15 @@ nav a:hover {
 }
 
 .sidebar {
-    background-color: #78D5D7;
+    background-color: var(--accent);
     padding: 1.5rem;
     width: 220px;
     min-height: 100vh;
-    border-right: 1px solid #333;
+    border-right: 1px solid var(--border);
 }
 
 .sidebar h2 {
-    color: #121212;
+    color: var(--primary-bg);
     margin-top: 0;
 }
 
@@ -56,17 +71,19 @@ nav a:hover {
 }
 
 .sidebar li {
-    color: #121212;
+    color: var(--primary-bg);
     margin: 12px 0;
 }
 
 .sidebar a {
-    color: #121212;
+    color: var(--primary-bg);
     text-decoration: none;
 }
 
-.sidebar a:hover {
-    color: #2081C3;
+.sidebar a:hover,
+.sidebar a:focus {
+    color: var(--accent-hover);
+    outline: none;
 }
 
 .content {
@@ -74,51 +91,88 @@ nav a:hover {
     padding: 2rem;
 }
 
-.content h2, .content h3 {
-    color: #78D5D7;
+.content h2,
+.content h3 {
+    color: var(--accent);
+}
+
+.center {
+    text-align: center !important;
+}
+.italic {
+    font-style: italic !important;
+}
+.large {
+    font-size: x-large !important;
 }
 
 .btn {
-    background-color: #78D5D7;
-    color: #F7F9F9;
+    background-color: var(--accent);
+    color: var(--primary-color);
     padding: 12px 24px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
+    border: none;
+    cursor: pointer;
     transition: background 0.3s ease;
+    display: inline-block;
 }
 
-.btn:hover {
-    background-color: #2081C3;
+.btn:hover,
+.btn:focus {
+    background-color: var(--accent-hover);
+    outline: none;
 }
 
 footer {
-    background-color: #1e1e1e;
+    background-color: var(--secondary-bg);
     padding: 1rem;
     text-align: center;
-    border-top: 1px solid #333;
-    color: #888;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
 }
+
 #reposGithub div {
-    background-color: #1e1e1e;
+    background-color: var(--secondary-bg);
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 8px;
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+    box-shadow: var(--shadow);
 }
 
 #reposGithub a {
-    color: #78D5D7;
+    color: var(--accent);
     text-decoration: none;
     transition: color 0.3s ease;
 }
-#reposGithub a:hover {
-    color: #2081C3; /* verde neon claro (ou escolha outra cor) */
+
+#reposGithub a:hover,
+#reposGithub a:focus {
+    color: var(--accent-hover);
+    outline: none;
 }
+
 #reposGithub p {
-    color: #F7F9F9;
+    color: var(--primary-color);
 }
+
 #reposGithub p:last-of-type {
     font-size: 0.9em;
-    color: #aaa;
+    color: var(--muted-light);
+}
+
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+    }
+    .content {
+        padding: 1rem;
+    }
 }
