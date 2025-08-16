@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (linkSobre && conteudo) {
     linkSobre.addEventListener("click", (e) => {
       e.preventDefault();
-
+b n
       fetch("assets/html/sobre.html") // Caminho RELATIVO, funciona no GitHub Pages
         .then(res => {
           if (!res.ok) throw new Error("Erro ao carregar conteúdo.");

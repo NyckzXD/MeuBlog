@@ -80,8 +80,8 @@ nav a {
 
 nav a:hover,
 nav a:focus {
-    color: var(--accent-hover);
-    border-bottom: 2px solid var(--accent-hover);
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
     background: var(--accent-light, #445566);
     box-shadow: 0 4px 12px rgba(68, 85, 102, 0.18);
     outline: none;
@@ -143,7 +143,7 @@ nav a:focus {
 }
 .sidebar a:hover,
 .sidebar a:focus {
-    color: var(--accent-hover);
+    color: var(--accent);
     outline: none;
     transform: translateX(3px) scale(1.05);
 }
