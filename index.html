@@ -3,59 +3,116 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Nycolas Fernandes | Desenvolvedor em formação</title>
+    <title>Nycolas Fernandes | Dev</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Perfil de Nycolas Fernandes, desenvolvedor em formação e estudante de Sistemas de Informação.">
-    <link rel="stylesheet" type="text/css" href="./assets/CSS/style.css">
+    <meta name="description" content="Portfólio de Nycolas Fernandes, desenvolvedor em formação e estudante de Sistemas de Informação.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/CSS/style.css">
 </head>
 <body>
-<header>
-    <h1 id="titulo">Nycolas Fernandes</h1>
-    <h3 id="titulo">Desenvolvedor Junior</h1>
-    <nav aria-label="Navegação principal">
-        <a href="index.html">Início</a>
-        <a href="" id="linkSobre">Sobre</a>
-    </nav>
-</header>
 
-<section class="container">
-    <aside class="sidebar">
-        <h2>Contatos</h2>
-        <ul>
-            <li><a href="https://github.com/NyckzXD"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>
-            <li><a href="https://www.instagram.com/nycolasfe_/"><i class="fab fa-instagram" aria-hidden="true"></i> Instagram</a></li>
-            <li><a href="https://www.linkedin.com/in/nyckzxd/"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
-        </ul>
-    </aside>
+<nav class="navbar">
+    <span class="nav-logo">nycolas<span class="accent">.</span>dev</span>
+    <div class="nav-links">
+        <a href="#sobre" class="nav-link">sobre</a>
+        <a href="#projetos" class="nav-link">projetos</a>
+        <a href="#" id="linkSobre" class="nav-link">carreira</a>
+        <a href="mailto:nycolas.tec@gmail.com" class="nav-cta">contato</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
 
-    <main class="content">
-        <section class="intro">
-            <h2 class="center">👋 Olá! Eu sou Nycolas Fernandes</h2>
-            <p class="center italic large">
-                Estudante de Programação • 19 anos • Apaixonado por tecnologia
-            </p>
-        </section>
-
-        <section class="sobre">
-            <p>Sou um entusiasta da tecnologia com 19 anos, atualmente cursando Sistemas de Informação. Desde meu primeiro contato com programação, descobri uma paixão por resolver problemas, criar soluções e explorar o universo do desenvolvimento de software.</p>
-            <p>Atualmente estudo <strong>JavaScript</strong>, <strong>HTML/CSS</strong>, <strong>PHP</strong>, <strong>C++</strong> e <strong>Git</strong>, e busco sempre aprimorar meus conhecimentos com projetos práticos, cursos e participação em comunidades.</p>
-            <p>Meu objetivo é me tornar um desenvolvedor completo, dominando front-end e back-end, além de explorar áreas como <strong>segurança da informação</strong> e <strong>banco de dados</strong>.</p>
-            <p>Sou curioso, comprometido e acredito que o aprendizado contínuo é a chave para crescer na área de tecnologia.</p>
-        </section>
-
-        <h3 class="center">📁 Meus repositórios do GitHub</h3>
-        <div id="reposGithub">Carregando repositórios...</div>
-        <div class="center" style="margin-top: 20px;">
-            <a href="mailto:nycolas.tec@gmail.com" class="btn">📩 Meu Email</a>
+<main>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="hero-tag"><span class="dot"></span> Open to Work </p>
+            <h1 class="hero-title">Oi, eu sou<br><span class="accent-text">Nycolas Fernandes</span></h1>
+            <p class="hero-sub">Desenvolvedor Júnior <span class="divider">·</span> Estudante de SI <span class="divider">·</span> 20 anos</p>
+            <p class="hero-desc">Apaixonado por resolver problemas com código. Atualmente estudando na <strong> Faculdade Anhanguera</strong>.</p>
+            <div class="hero-actions">
+                <a href="#projetos" class="btn-primary">Ver projetos</a>
+                <a href="mailto:nycolas.tec@gmail.com" class="btn-ghost">Falar comigo</a>
+            </div>
+            <div class="hero-socials">
+                <a href="https://github.com/NyckzXD" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/nycolasfe_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
-        <p class="center italic">"O caminho se faz caminhando."</p>
-        <hr>
-    </main>
-</section>
+        <div class="hero-code">
+            <div class="code-window">
+                <div class="code-bar">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="code-filename">nycolas.js</span>
+                </div>
+                <pre class="code-body"><code><span class="c-keyword">const</span> <span class="c-var">dev</span> = {
+  <span class="c-prop">nome</span>: <span class="c-str">"Nycolas Fernandes"</span>,
+  <span class="c-prop">stack</span>: [<span class="c-str">"Python"</span>, <span class="c-str">"JavaScript"</span>, <span class="c-str">"SQL"</span>],
+  <span class="c-prop">foco</span>: <span class="c-str">"Full-Stack"</span>,
+  <span class="c-prop">estudando</span>: <span class="c-str">"Sistemas de Informação"</span>,
+  <span class="c-prop">café</span>: <span class="c-bool">true</span>,
+};</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="section" id="sobre">
+        <div class="section-inner">
+            <h2 class="section-title">Sobre mim</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>Sou um desenvolvedor em formação com foco em back-end, atualmente atuando no <strong>LuizaLabs</strong> e cursando <strong>Sistemas de Informação</strong> na Anhanguera.</p>
+                    <p>Minha jornada começou pela curiosidade em entender como as coisas funcionam por dentro. Hoje, combino aprendizado acadêmico com experiência prática para construir soluções reais.</p>
+                    <p>Meu objetivo é me tornar um desenvolvedor completo — dominando back-end, banco de dados e, futuramente, segurança da informação.</p>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-tag"><i class="fab fa-python"></i> Python</div>
+                    <div class="skill-tag"><i class="fab fa-html5"></i> HTML/CSS</div>
+                    <div class="skill-tag"><i class="fas fa-code"></i> C++</div>
+                    <div class="skill-tag"><i class="fab fa-git-alt"></i> Git</div>
+                    <div class="skill-tag"><i class="fas fa-database"></i> SQL</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section class="section section-alt" id="projetos">
+        <div class="section-inner">
+            <h2 class="section-title">Projetos no GitHub</h2>
+            <p class="section-sub">Repositórios públicos mais recentes</p>
+            <div id="reposGithub" class="repos-grid">
+                <div class="repo-loading">
+                    <i class="fas fa-circle-notch fa-spin"></i> Carregando repositórios...
+                </div>
+            </div>
+            <div class="center mt-2">
+                <a href="https://github.com/NyckzXD" target="_blank" class="btn-ghost">Ver todos no GitHub <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CARREIRA (conteúdo dinâmico) -->
+    <section class="section" id="carreira-section" style="display:none;">
+        <div class="section-inner" id="carreira-container"></div>
+    </section>
+</main>
+
 <footer>
-    <p id="copyright">&copy; 2025 - Nycolas Fernandes. Todos os direitos reservados.</p>
+    <p>Feito com <i class="fas fa-heart accent"></i> por <strong>Nycolas Fernandes</strong> &copy; 2026</p>
+    <div class="footer-socials">
+        <a href="https://github.com/NyckzXD" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
 </footer>
+
 <script src="./assets/js/code.js"></script>
 </body>
 </html>
