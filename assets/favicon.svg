@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c6af7"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#13131a"/>
+      <stop offset="100%" stop-color="#1a1a24"/>
+    </linearGradient>
+  </defs>
+  <!-- Background rounded square -->
+  <rect width="32" height="32" rx="7" fill="url(#bg)"/>
+  <!-- Border subtle -->
+  <rect width="32" height="32" rx="7" fill="none" stroke="url(#g)" stroke-width="1" opacity="0.4"/>
+  <!-- Left bracket < -->
+  <polyline points="9,10 5,16 9,22" fill="none" stroke="url(#g)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Right bracket > -->
+  <polyline points="23,10 27,16 23,22" fill="none" stroke="url(#g)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Slash / in the middle -->
+  <line x1="19" y1="9" x2="13" y2="23" stroke="#a78bfa" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+</svg>
