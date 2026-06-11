@@ -59,7 +59,11 @@ function startTypewriter() {
     tick();
 }
 
-document.addEventListener('DOMContentLoaded', startTypewriter);
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', startTypewriter);
+} else {
+    startTypewriter();
+}
 
 // ── GitHub Repos
 fetch("https://api.github.com/users/NyckzXD/repos?sort=updated&per_page=6")
