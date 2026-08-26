@@ -1,11 +1,11 @@
-# 🌐 Meu Portfólio Pessoal - Nycolas Fernandes
+#  Meu Portfólio Pessoal - Nycolas Fernandes
 
 Este é meu site pessoal e blog, desenvolvido com o objetivo de compartilhar meus conhecimentos, trajetória como estudante de programação, projetos e canais de contato.
 
 > 🔗 Acesse em:
 ---
 
-## 🧠 Sobre o Projeto
+##  Sobre o Projeto
 
 O projeto foi criado com:
 
@@ -17,13 +17,13 @@ O projeto foi criado com:
 
 ---
 
-## 📁 Funcionalidades
+##  Funcionalidades
 
 - Página inicial com apresentação pessoal
 - Exibição de repositórios do GitHub com número de **estrelas ⭐** e **forks 🍴**
 ---
 
-## 🛠️ Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 - HTML5
 - CSS3
