@@ -2,20 +2,20 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-    --bg:        #0d0d12;
-    --bg2:       #13131a;
-    --bg3:       #1a1a24;
-    --border:    rgba(255,255,255,0.07);
-    --text:      #e8e8f0;
-    --muted:     #7878a0;
-    --accent:    #7c6af7;
-    --accent2:   #a78bfa;
-    --accent-glow: rgba(124,106,247,0.25);
+    --bg:        #151130;
+    --bg2:       #1c173e;
+    --bg3:       #272154;
+    --border:    rgba(200,190,250,0.12);
+    --text:      #f1effe;
+    --muted:     #9f99c7;
+    --accent:    #9d84fc;
+    --accent2:   #C8BEFA;
+    --accent-glow: rgba(200,190,250,0.25);
     --green:     #4ade80;
     --red:       #f87171;
     --yellow:    #fbbf24;
     --radius:    12px;
-    --shadow:    0 4px 24px rgba(0,0,0,0.4);
+    --shadow:    0 4px 24px rgba(10,8,24,0.5);
 }
 
 html { scroll-behavior: smooth; }
@@ -46,7 +46,7 @@ strong { color: #fff; }
     justify-content: space-between;
     padding: 0 5%;
     height: 64px;
-    background: rgba(13,13,18,0.85);
+    background: rgba(21,17,48,0.85);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
 }
@@ -80,7 +80,7 @@ strong { color: #fff; }
     font-weight: 600;
     color: var(--accent2);
     padding: 7px 18px;
-    border: 1px solid rgba(124,106,247,0.4);
+    border: 1px solid rgba(200,190,250,0.35);
     border-radius: 8px;
     transition: background 0.2s, box-shadow 0.2s;
     margin-left: 8px;
@@ -184,7 +184,7 @@ strong { color: #fff; }
 
 .hero-desc {
     font-size: 1.05rem;
-    color: #b0b0c8;
+    color: #cfcbef;
     max-width: 480px;
     margin-bottom: 36px;
 }
@@ -198,8 +198,8 @@ strong { color: #fff; }
 
 .btn-primary {
     background: linear-gradient(135deg, var(--accent), var(--accent2));
-    color: #fff;
-    font-weight: 600;
+    color: #151130;
+    font-weight: 700;
     font-size: 0.92rem;
     padding: 12px 28px;
     border-radius: var(--radius);
@@ -207,7 +207,7 @@ strong { color: #fff; }
     box-shadow: 0 0 24px var(--accent-glow);
 }
 .btn-primary:hover {
-    opacity: 0.88;
+    opacity: 0.92;
     transform: translateY(-2px);
     box-shadow: 0 4px 32px var(--accent-glow);
 }
@@ -223,7 +223,7 @@ strong { color: #fff; }
     transition: border-color 0.2s, background 0.2s, transform 0.2s;
 }
 .btn-ghost:hover {
-    border-color: rgba(124,106,247,0.4);
+    border-color: rgba(200,190,250,0.4);
     background: var(--bg3);
     transform: translateY(-2px);
 }
@@ -247,7 +247,7 @@ strong { color: #fff; }
 }
 .hero-socials a:hover {
     color: var(--accent2);
-    border-color: rgba(124,106,247,0.4);
+    border-color: rgba(200,190,250,0.4);
     background: var(--accent-glow);
 }
 
@@ -262,7 +262,7 @@ strong { color: #fff; }
     border: 1px solid var(--border);
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: var(--shadow), 0 0 60px rgba(124,106,247,0.08);
+    box-shadow: var(--shadow), 0 0 60px rgba(200,190,250,0.08);
 }
 
 .code-bar {
@@ -309,11 +309,11 @@ strong { color: #fff; }
     50% { opacity: 0; }
 }
 
-.c-keyword { color: #c792ea; }
-.c-var     { color: #82aaff; }
-.c-prop    { color: #f07178; }
-.c-str     { color: #c3e88d; }
-.c-bool    { color: #ff9d57; }
+.c-keyword { color: #c8befa; }
+.c-var     { color: #93c5fd; }
+.c-prop    { color: #f472b6; }
+.c-str     { color: #86efac; }
+.c-bool    { color: #fcd34d; }
 
 /* ── Sections ── */
 .section {
@@ -364,7 +364,7 @@ strong { color: #fff; }
 }
 
 .about-text p {
-    color: #b0b0c8;
+    color: #cfcbef;
     margin-bottom: 16px;
 }
 
@@ -389,7 +389,7 @@ strong { color: #fff; }
     transition: border-color 0.2s, color 0.2s;
 }
 .skill-tag:hover {
-    border-color: rgba(124,106,247,0.4);
+    border-color: rgba(200,190,250,0.4);
     color: var(--accent2);
 }
 .skill-tag i { color: var(--accent); font-size: 0.9rem; }
@@ -414,9 +414,9 @@ strong { color: #fff; }
     animation: fadeUp 0.5s both;
 }
 .repo-card:hover {
-    border-color: rgba(124,106,247,0.35);
+    border-color: rgba(200,190,250,0.35);
     transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    box-shadow: 0 8px 24px rgba(10,8,24,0.4);
 }
 
 @keyframes fadeUp {
@@ -476,7 +476,7 @@ strong { color: #fff; }
 }
 .career-card:hover {
     transform: translateX(4px);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 20px rgba(10,8,24,0.4);
 }
 
 .job-title { color: var(--accent2); font-weight: 600; font-size: 1rem; }
@@ -491,7 +491,7 @@ strong { color: #fff; }
     margin: 24px 0 32px;
 }
 .skills-list li {
-    color: #b0b0c8;
+    color: #cfcbef;
     padding-left: 16px;
     position: relative;
     font-size: 0.95rem;
